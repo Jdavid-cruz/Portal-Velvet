@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ masajista.nombre }} · Velvet Touch</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--gold:#d4af37;--gold-light:#e8c84a;--gold-dim:rgba(212,175,55,.12);--dark:#0d0d0d;--surface:#141414;--surface2:#1c1c1c;--border:rgba(212,175,55,.2);--text-muted:rgba(255,255,255,.4);}
+  *,*::before,*::after{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--dark);color:#f0ece0;font-family:'Inter',sans-serif;}
+  .vt-navbar{position:sticky;top:0;z-index:100;background:rgba(13,13,13,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
+  .vt-logo{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold);text-decoration:none;}
+  .vt-logo span{font-style:italic;font-weight:400;color:#f0ece0;}
+  .back-btn{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--text-muted);text-decoration:none;transition:color .2s;letter-spacing:.05em;}
+  .back-btn:hover{color:var(--gold);}
+  .profile-hero{position:relative;height:340px;overflow:hidden;background:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1400&q=70') center/cover no-repeat;}
+  .profile-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,13,13,.2) 0%,rgba(13,13,13,.95) 100%);}
+  .profile-layout{max-width:1100px;margin:0 auto;padding:0 1.5rem 6rem;position:relative;z-index:1;margin-top:-120px;}
+  .profile-main-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px;border:1px solid var(--border);display:block;box-shadow:0 20px 60px rgba(0,0,0,.6);}
+  .gallery-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-top:.6rem;}
+  .gallery-thumb{aspect-ratio:1;object-fit:cover;border-radius:3px;border:1px solid transparent;cursor:pointer;transition:border-color .2s,opacity .2s;opacity:.7;width:100%;}
+  .gallery-thumb:hover,.gallery-thumb.active{border-color:var(--gold);opacity:1;}
+  .profile-name{font-family:'Playfair Display',serif;font-size:2.6rem;color:#f5f0e8;margin-bottom:.2rem;line-height:1.1;}
+  .profile-verified{display:inline-flex;align-items:center;gap:.35rem;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.3);color:var(--gold);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .7rem;border-radius:2px;margin-bottom:1.5rem;}
+  .stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;margin-bottom:1.5rem;}
+  .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:.9rem 1rem;display:flex;align-items:flex-start;gap:.75rem;}
+  .stat-card-icon{width:36px;height:36px;border-radius:2px;background:var(--gold-dim);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.9rem;flex-shrink:0;}
+  .stat-card-label{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.15rem;}
+  .stat-card-value{font-size:.92rem;color:#f0ece0;font-weight:500;}
+  .tarifa-box{background:var(--gold-dim);border:1px solid var(--border);border-radius:3px;padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;}
+  .tarifa-value{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);}
+  .tarifa-unit{font-size:.78rem;color:var(--text-muted);margin-left:.3rem;}
+  .tag-list{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem;}
+  .service-tag{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(240,236,224,.65);font-size:.72rem;letter-spacing:.05em;padding:.28rem .75rem;border-radius:2px;}
+  .section-divider{height:1px;background:var(--border);margin:2rem 0;}
+  .section-heading{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;}
+  .profile-desc{font-size:.93rem;color:rgba(240,236,224,.7);line-height:1.9;font-weight:300;}
+  .profile-desc p{margin-bottom:1rem;}
+  .avail-row{display:flex;align-items:center;gap:.7rem;margin-bottom:.6rem;}
+  .avail-dot{width:8px;height:8px;border-radius:50%;background:#2d7a4f;flex-shrink:0;box-shadow:0 0 8px rgba(45,122,79,.6);}
+  .avail-label{font-size:.82rem;color:rgba(240,236,224,.65);}
+  .stars{color:var(--gold);font-size:.85rem;letter-spacing:.05em;}
+  .review-card{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:1.2rem 1.3rem;margin-bottom:.75rem;}
+  .review-author{font-size:.8rem;font-weight:500;color:#f0ece0;margin-bottom:.15rem;}
+  .review-date{font-size:.7rem;color:var(--text-muted);margin-bottom:.5rem;}
+  .review-text{font-size:.83rem;color:rgba(240,236,224,.6);line-height:1.7;font-weight:300;}
+  .btn-whatsapp{display:flex;align-items:center;justify-content:center;gap:.65rem;background:#25d366;color:#fff;border:none;font-family:'Inter',sans-serif;font-size:.9rem;font-weight:600;padding:1rem 1.5rem;border-radius:3px;cursor:pointer;text-decoration:none;letter-spacing:.04em;transition:background .2s,transform .15s;}
+  .btn-whatsapp:hover{background:#20ba5a;color:#fff;transform:translateY(-1px);}
+  .btn-llamar{display:flex;align-items:center;justify-content:center;gap:.65rem;background:var(--surface2);color:#f0ece0;border:1px solid rgba(255,255,255,.12);font-family:'Inter',sans-serif;font-size:.9rem;font-weight:500;padding:.95rem 1.5rem;border-radius:3px;cursor:pointer;text-decoration:none;letter-spacing:.04em;transition:border-color .2s,background .2s;}
+  .btn-llamar:hover{border-color:var(--border);background:#252525;color:#f0ece0;}
+  .cta-stack{display:flex;flex-direction:column;gap:.7rem;}
+  .floating-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;background:rgba(13,13,13,.95);border-top:1px solid var(--border);backdrop-filter:blur(12px);padding:1rem 1.5rem;gap:.75rem;}
+  @media(max-width:767px){.profile-hero{height:220px;}.profile-layout{margin-top:-60px;}.floating-cta{display:flex;}.desktop-cta{display:none!important;}.profile-name{font-size:2rem;}}
+</style>
+</head>
+<body>
+
+<nav class="vt-navbar">
+  <a href="{{ url_for('index') }}" class="vt-logo">Velvet <span>Touch</span></a>
+  <a href="{{ url_for('index') }}" class="back-btn"><i class="bi bi-arrow-left"></i> Volver al directorio</a>
+</nav>
+
+<div class="profile-hero"></div>
+
+<div class="profile-layout">
+  <div class="row g-4 g-lg-5">
+
+    <!-- GALERÍA -->
+    <div class="col-12 col-md-5 col-lg-4">
+      <img src="{{ masajista.foto_url() }}" alt="{{ masajista.nombre }}" class="profile-main-photo" id="main-photo">
+      <!-- Miniaturas: la foto principal repetida en 4 thumbs (ampliar cuando haya galería múltiple) -->
+      <div class="gallery-thumbs">
+        <img src="{{ masajista.foto_url() }}" class="gallery-thumb active" alt="" onclick="switchPhoto(this, '{{ masajista.foto_url() }}')">
+        <img src="https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=200&q=60" class="gallery-thumb" alt="" onclick="switchPhoto(this,'https://images.unsplash.com/photo-1516726817505-f5ed825624d8?w=800&q=80')">
+        <img src="https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?w=200&q=60" class="gallery-thumb" alt="" onclick="switchPhoto(this,'https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?w=800&q=80')">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=200&q=60" class="gallery-thumb" alt="" onclick="switchPhoto(this,'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80')">
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="col-12 col-md-7 col-lg-8">
+
+      <h1 class="profile-name">{{ masajista.nombre }}</h1>
+      <div class="mb-3">
+        <span class="profile-verified"><i class="bi bi-patch-check-fill"></i> Perfil verificado</span>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-card-icon"><i class="bi bi-calendar3"></i></div>
+          <div><p class="stat-card-label">Edad</p><p class="stat-card-value">{{ masajista.edad or '—' }} años</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon"><i class="bi bi-globe2"></i></div>
+          <div><p class="stat-card-label">Nacionalidad</p><p class="stat-card-value">{{ masajista.nacionalidad or '—' }}</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon"><i class="bi bi-geo-alt"></i></div>
+          <div><p class="stat-card-label">Ubicación</p><p class="stat-card-value">{{ masajista.ubicacion or '—' }}</p></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon"><i class="bi bi-clock"></i></div>
+          <div><p class="stat-card-label">Disponibilidad</p><p class="stat-card-value">Lun — Dom</p></div>
+        </div>
+      </div>
+
+      <!-- Tarifa -->
+      <div class="tarifa-box">
+        <div>
+          <p class="stat-card-label">Tarifa</p>
+          {% if masajista.tarifa_hora %}
+          <p class="tarifa-value" style="margin:0;">{{ masajista.tarifa_hora | int }} €<span class="tarifa-unit">/ hora</span></p>
+          {% else %}
+          <p class="tarifa-value" style="margin:0;font-size:1rem;color:var(--text-muted);">Consultar</p>
+          {% endif %}
+        </div>
+        {% if masajista.tarifa_30min %}
+        <div style="text-align:right;">
+          <p class="stat-card-label">30 minutos</p>
+          <p class="stat-card-value">{{ masajista.tarifa_30min | int }} €</p>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- Servicios -->
+      <p class="section-heading">Servicios</p>
+      <div class="tag-list">
+        {% if masajista.servicios %}
+          {% set servicios_list = masajista.servicios | from_json %}
+          {% for s in servicios_list %}
+          <span class="service-tag">{{ s }}</span>
+          {% endfor %}
+        {% else %}
+          <span class="service-tag" style="color:var(--text-muted);">Sin especificar</span>
+        {% endif %}
+      </div>
+
+      <!-- Disponibilidad -->
+      <div class="section-divider"></div>
+      <p class="section-heading">Estado actual</p>
+      <div class="avail-row">
+        <span class="avail-dot"></span>
+        <span class="avail-label">Disponible · {{ masajista.ubicacion or 'España' }}</span>
+      </div>
+      <div class="avail-row" style="margin-bottom:0;">
+        <i class="bi bi-telephone" style="color:var(--gold);font-size:.85rem;"></i>
+        <span class="avail-label">{{ masajista.telefono or 'Contactar para más info' }}</span>
+      </div>
+
+      <!-- CTA Desktop -->
+      <div class="section-divider desktop-cta"></div>
+      <div class="cta-stack desktop-cta">
+        {% set tel_limpio = (masajista.telefono or '') | replace('+','') | replace(' ','') | replace('-','') %}
+        <a href="https://wa.me/{{ tel_limpio }}?text=Hola%20{{ masajista.nombre | urlencode }}%2C%20te%20contacto%20desde%20Velvet%20Touch"
+           class="btn-whatsapp" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp" style="font-size:1.1rem;"></i> Contactar por WhatsApp
+        </a>
+        <a href="tel:{{ masajista.telefono or '' }}" class="btn-llamar">
+          <i class="bi bi-telephone" style="font-size:1rem;"></i> Llamar ahora
+        </a>
+      </div>
+
+      <!-- Editar perfil si es el dueño -->
+      {% if current_user and current_user.id == masajista.id %}
+      <div style="margin-top:1.5rem;">
+        <a href="{{ url_for('crear_perfil') }}" style="color:var(--text-muted);font-size:.78rem;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;">
+          <i class="bi bi-pencil"></i> Editar mi perfil
+        </a>
+      </div>
+      {% endif %}
+
+    </div>
+  </div><!-- /row -->
+
+  <!-- DESCRIPCIÓN -->
+  <div class="section-divider"></div>
+  <div class="row g-4 g-lg-5">
+    <div class="col-12 col-lg-7">
+      <p class="section-heading"><i class="bi bi-feather me-1"></i> Sobre mí y mis servicios</p>
+      <div class="profile-desc">
+        {% if masajista.descripcion %}
+          {% for parrafo in masajista.descripcion.split('\n') %}
+            {% if parrafo.strip() %}<p>{{ parrafo }}</p>{% endif %}
+          {% endfor %}
+        {% else %}
+          <p style="color:var(--text-muted);">Esta masajista aún no ha añadido una descripción.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="col-12 col-lg-5">
+      <p class="section-heading"><i class="bi bi-star me-1"></i> Valoraciones</p>
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.2rem;">
+        <span style="font-family:'Playfair Display',serif;font-size:3rem;color:var(--gold);line-height:1;">4.9</span>
+        <div>
+          <div class="stars">★★★★★</div>
+          <p style="font-size:.78rem;color:var(--text-muted);margin:.2rem 0 0;">Basado en 38 reseñas</p>
+        </div>
+      </div>
+      <!-- Reseñas estáticas de ejemplo (futuro: tabla reviews en DB) -->
+      <div class="review-card">
+        <p class="review-author">Carlos M.</p>
+        <p class="review-date">Hace 3 días</p>
+        <div class="stars" style="font-size:.78rem;margin-bottom:.5rem;">★★★★★</div>
+        <p class="review-text">Experiencia absolutamente única. Muy profesional y el ambiente del local es increíble.</p>
+      </div>
+      <div class="review-card">
+        <p class="review-author">Alberto R.</p>
+        <p class="review-date">Hace 1 semana</p>
+        <div class="stars" style="font-size:.78rem;margin-bottom:.5rem;">★★★★★</div>
+        <p class="review-text">Trato impecable, puntual y muy atenta en todo momento. Muy recomendable.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /profile-layout -->
+
+<!-- CTA FLOTANTE MÓVIL -->
+<div class="floating-cta">
+  {% set tel_limpio = (masajista.telefono or '') | replace('+','') | replace(' ','') | replace('-','') %}
+  <a href="https://wa.me/{{ tel_limpio }}" class="btn-whatsapp" target="_blank" style="flex:1;">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+  </a>
+  <a href="tel:{{ masajista.telefono or '' }}" class="btn-llamar" style="flex:1;">
+    <i class="bi bi-telephone"></i> Llamar
+  </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function switchPhoto(thumb, src) {
+  document.getElementById('main-photo').src = src;
+  document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+</script>
+</body>
+</html>

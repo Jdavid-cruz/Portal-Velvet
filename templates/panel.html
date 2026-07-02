@@ -1,0 +1,9 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Panel</title></head>
+<body style="background:#0d0d0d;color:#f0ece0;font-family:sans-serif;padding:2rem;">
+  <h2>Hola, {{ usuario.nombre }}</h2>
+  <p><a href="/crear-perfil" style="color:#d4af37;">Editar mi perfil</a> ·
+     <a href="/logout" style="color:#d4af37;">Cerrar sesión</a></p>
+  {% if usuario.publicado %}
+    <p><a href="/perfil/{{ usuario.id }}" style="color:#d4af37;">Ver mi perfil público</a></p>
+  {% endif %}
+</body></html>

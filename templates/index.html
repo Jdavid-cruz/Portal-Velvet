@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masajistas en España | Masajes Eróticos, Tántricos y Sensuales — Velvet Touch</title>
+<meta name="description" content="Directorio premium de masajistas profesionales en España. Masajes eróticos, tántricos, sensuales y relajantes en Madrid, Barcelona, Valencia, Sevilla y toda España. Masajistas verificadas, discretas y de alta calidad.">
+<meta name="keywords" content="masajistas españa, masajes eróticos madrid, masajes tántricos barcelona, masajistas independientes, masajes sensuales valencia, masajistas profesionales, masajes relajantes, masajistas a domicilio, masajes body to body, masajistas verificadas, masajes de pareja, masajistas madrid, masajistas barcelona, masajistas valencia, masajistas sevilla, masajistas bilbao, masajes con aceites, masajistas latinoamericanas, masajistas rusas, masajistas jóvenes, masajes sensitivos españa">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Velvet Touch">
+<link rel="canonical" href="https://velvettouch.es/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://velvettouch.es/">
+<meta property="og:title" content="Velvet Touch — Masajistas Premium en España">
+<meta property="og:description" content="Encuentra masajistas profesionales en toda España. Masajes eróticos, tántricos y sensuales con discreción y elegancia.">
+<meta property="og:image" content="https://velvettouch.es/static/og-image.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Velvet Touch — Masajistas Premium en España">
+<meta name="twitter:description" content="Directorio exclusivo de masajistas profesionales verificadas en España.">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Velvet Touch",
+  "url": "https://velvettouch.es",
+  "description": "Directorio premium de masajistas profesionales en España. Masajes eróticos, tántricos, sensuales y relajantes.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://velvettouch.es/buscar?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Velvet Touch",
+  "url": "https://velvettouch.es",
+  "logo": "https://velvettouch.es/static/logo.png",
+  "sameAs": [],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "availableLanguage": "Spanish"
+  }
+}
+</script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #d4af37; --gold-light: #e8c84a; --gold-dim: rgba(212,175,55,0.15);
+    --dark: #0d0d0d; --surface: #141414; --surface2: #1c1c1c;
+    --border: rgba(212,175,55,0.2); --text-muted: rgba(255,255,255,0.45);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--dark); color: #f0ece0; font-family: 'Inter', sans-serif; }
+
+  .vt-navbar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(13,13,13,0.72); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border); padding: 0 2rem; height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .vt-logo { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--gold); letter-spacing:.04em; text-decoration:none; }
+  .vt-logo span { font-style:italic; font-weight:400; color:#f0ece0; }
+  .vt-nav-links { display:flex; align-items:center; gap:2rem; }
+  .vt-nav-links a { color:rgba(240,236,224,.7); text-decoration:none; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase; transition:color .2s; }
+  .vt-nav-links a:hover { color:var(--gold); }
+  .btn-gold { background:var(--gold); color:#0d0d0d; border:none; font-family:'Inter',sans-serif; font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; padding:.5rem 1.4rem; border-radius:2px; text-decoration:none; transition:background .2s,transform .15s; display:inline-block; }
+  .btn-gold:hover { background:var(--gold-light); color:#0d0d0d; transform:translateY(-1px); }
+  .btn-outline-gold { background:transparent; color:var(--gold); border:1px solid var(--gold); font-family:'Inter',sans-serif; font-size:.8rem; font-weight:500; letter-spacing:.06em; text-transform:uppercase; padding:.45rem 1.2rem; border-radius:2px; text-decoration:none; transition:background .2s,color .2s; display:inline-block; }
+  .btn-outline-gold:hover { background:var(--gold-dim); color:var(--gold); }
+
+  .vt-hero {
+    min-height: 100vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; position:relative; overflow:hidden; padding:7rem 2rem 4rem;
+    background: linear-gradient(180deg,rgba(13,13,13,.55) 0%,rgba(13,13,13,.92) 100%),
+      url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1600&q=80') center/cover no-repeat;
+  }
+  .vt-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 60%,rgba(212,175,55,.07) 0%,transparent 70%); pointer-events:none; }
+  .vt-hero-eyebrow { display:inline-block; font-size:.72rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); border:1px solid var(--border); padding:.35rem 1rem; margin-bottom:1.8rem; border-radius:1px; }
+  .vt-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2.6rem,6vw,4.8rem); font-weight:600; line-height:1.1; color:#f5f0e8; margin-bottom:1.4rem; text-shadow:0 2px 40px rgba(0,0,0,.6); }
+  .vt-hero h1 em { color:var(--gold); font-style:italic; font-weight:400; }
+  .vt-hero p { font-size:1.05rem; color:rgba(240,236,224,.65); max-width:540px; margin:0 auto 2.4rem; line-height:1.8; font-weight:300; }
+  .hero-divider { width:48px; height:1px; background:var(--gold); margin:0 auto 1.4rem; opacity:.6; }
+
+  /* Breadcrumb */
+  .vt-breadcrumb { padding: 1.2rem 0 0; }
+  .vt-breadcrumb ol { display:flex; flex-wrap:wrap; gap:.3rem; list-style:none; padding:0; margin:0; font-size:.78rem; color:var(--text-muted); }
+  .vt-breadcrumb li + li::before { content:"›"; margin-right:.3rem; }
+  .vt-breadcrumb a { color:var(--gold); text-decoration:none; }
+
+  .vt-section { padding:5rem 0; }
+  .section-label { font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:.5rem; }
+  .section-title { font-family:'Playfair Display',serif; font-size:clamp(1.8rem,3vw,2.6rem); color:#f5f0e8; margin-bottom:.5rem; }
+  .section-subtitle { color:var(--text-muted); font-size:.9rem; margin-bottom:3rem; font-weight:300; }
+
+  .masajista-card { background:var(--surface); border:1px solid var(--border); border-radius:3px; overflow:hidden; transition:transform .3s,border-color .3s,box-shadow .3s; }
+  .masajista-card:hover { transform:translateY(-6px); border-color:rgba(212,175,55,.55); box-shadow:0 12px 40px rgba(0,0,0,.5); }
+  .masajista-card-img { width:100%; aspect-ratio:3/4; object-fit:cover; display:block; filter:saturate(.85) brightness(.92); transition:filter .4s,transform .4s; }
+  .masajista-card:hover .masajista-card-img { filter:saturate(1) brightness(1); transform:scale(1.03); }
+  .masajista-card-img-wrap { overflow:hidden; position:relative; }
+  .card-badge { position:absolute; top:12px; left:12px; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; background:var(--gold); color:#0d0d0d; padding:.2rem .55rem; border-radius:1px; font-weight:600; }
+  .masajista-card-body { padding:1.1rem 1.2rem 1.3rem; }
+  .masajista-name { font-family:'Playfair Display',serif; font-size:1.15rem; color:#f0ece0; margin-bottom:.55rem; }
+  .masajista-meta { display:flex; flex-direction:column; gap:.28rem; margin-bottom:1rem; }
+  .masajista-meta span { font-size:.78rem; color:var(--text-muted); display:flex; align-items:center; gap:.4rem; }
+  .masajista-meta .bi { color:var(--gold); font-size:.8rem; }
+  .btn-perfil { display:block; width:100%; text-align:center; padding:.55rem 1rem; border:1px solid var(--border); color:var(--gold); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; text-decoration:none; border-radius:2px; background:transparent; transition:background .2s,border-color .2s; }
+  .btn-perfil:hover { background:var(--gold-dim); border-color:var(--gold); color:var(--gold); }
+
+  /* Ciudad pills */
+  .city-pills { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:3rem; }
+  .city-pill { background:var(--surface); border:1px solid var(--border); color:rgba(240,236,224,.65); font-size:.78rem; letter-spacing:.05em; padding:.35rem .9rem; border-radius:2px; text-decoration:none; transition:border-color .2s,color .2s; }
+  .city-pill:hover { border-color:var(--gold); color:var(--gold); }
+
+  /* Stats bar */
+  .stats-bar { background:var(--surface); border:1px solid var(--border); border-radius:3px; padding:1.5rem 2rem; display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin-bottom:4rem; }
+  .stat-item { text-align:center; }
+  .stat-num { font-family:'Playfair Display',serif; font-size:2rem; color:var(--gold); line-height:1; }
+  .stat-lbl { font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-muted); margin-top:.3rem; }
+
+  /* SEO Article sections */
+  .seo-section { padding:4rem 0; border-top:1px solid var(--border); }
+  .seo-section h2 { font-family:'Playfair Display',serif; font-size:1.7rem; color:#f5f0e8; margin-bottom:1rem; }
+  .seo-section h3 { font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--gold); margin:1.5rem 0 .6rem; }
+  .seo-section p { font-size:.9rem; color:rgba(240,236,224,.65); line-height:1.9; margin-bottom:1rem; font-weight:300; }
+  .seo-section ul { padding-left:1.2rem; }
+  .seo-section ul li { font-size:.9rem; color:rgba(240,236,224,.6); line-height:1.8; margin-bottom:.4rem; font-weight:300; }
+  .seo-section ul li::marker { color:var(--gold); }
+
+  /* FAQ */
+  .faq-item { border:1px solid var(--border); border-radius:3px; margin-bottom:.75rem; overflow:hidden; }
+  .faq-question { padding:1rem 1.3rem; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-size:.9rem; color:rgba(240,236,224,.8); user-select:none; }
+  .faq-question:hover { background:rgba(212,175,55,.05); }
+  .faq-question .bi { color:var(--gold); transition:transform .25s; }
+  .faq-question.open .bi { transform:rotate(45deg); }
+  .faq-answer { max-height:0; overflow:hidden; transition:max-height .3s ease; }
+  .faq-answer-inner { padding:.8rem 1.3rem 1.1rem; font-size:.85rem; color:rgba(240,236,224,.55); line-height:1.8; font-weight:300; border-top:1px solid var(--border); }
+
+  /* City cards grid */
+  .city-card { background:var(--surface); border:1px solid var(--border); border-radius:3px; padding:1.5rem; text-align:center; transition:border-color .2s,transform .2s; text-decoration:none; display:block; }
+  .city-card:hover { border-color:rgba(212,175,55,.5); transform:translateY(-3px); }
+  .city-card-name { font-family:'Playfair Display',serif; font-size:1.1rem; color:#f0ece0; margin-bottom:.3rem; }
+  .city-card-count { font-size:.75rem; color:var(--text-muted); }
+  .city-card-icon { font-size:1.5rem; color:var(--gold); margin-bottom:.7rem; opacity:.6; }
+
+  /* Service type cards */
+  .service-card { background:var(--surface); border:1px solid var(--border); border-radius:3px; padding:1.5rem; }
+  .service-card-title { font-family:'Playfair Display',serif; font-size:1rem; color:var(--gold); margin-bottom:.5rem; }
+  .service-card-desc { font-size:.82rem; color:var(--text-muted); line-height:1.7; font-weight:300; }
+
+  /* Empty state */
+  .empty-state { text-align:center; padding:5rem 2rem; color:var(--text-muted); }
+  .empty-state .bi { font-size:3rem; color:var(--gold); opacity:.3; margin-bottom:1rem; display:block; }
+
+  /* Flash */
+  .flash-container { position:fixed; top:80px; right:1.5rem; z-index:2000; display:flex; flex-direction:column; gap:.5rem; }
+  .flash-msg { padding:.75rem 1.2rem; border-radius:3px; font-size:.82rem; border:1px solid; display:flex; align-items:center; gap:.6rem; min-width:260px; }
+  .flash-success { background:rgba(45,122,79,.15); border-color:rgba(45,122,79,.4); color:#5dd98a; }
+  .flash-danger  { background:rgba(180,40,40,.15);  border-color:rgba(180,40,40,.4);  color:#f17070; }
+  .flash-warning { background:rgba(180,130,0,.15);  border-color:rgba(180,130,0,.4);  color:#e8c84a; }
+  .flash-info    { background:rgba(50,100,180,.15);  border-color:rgba(50,100,180,.4);  color:#80aaee; }
+
+  .vt-footer { background:var(--surface); border-top:1px solid var(--border); padding:3.5rem 0 2rem; }
+  .footer-logo { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--gold); margin-bottom:.6rem; }
+  .footer-desc { font-size:.8rem; color:var(--text-muted); max-width:260px; line-height:1.7; margin-bottom:1.2rem; }
+  .footer-links { list-style:none; padding:0; margin:0; }
+  .footer-links li { margin-bottom:.5rem; }
+  .footer-links a { color:var(--text-muted); text-decoration:none; font-size:.82rem; transition:color .2s; }
+  .footer-links a:hover { color:var(--gold); }
+  .footer-heading { font-size:.68rem; letter-spacing:.15em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem; }
+  .footer-divider { border-color:var(--border); margin:2rem 0 1.2rem; }
+  .footer-legal { font-size:.72rem; color:var(--text-muted); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem; }
+  .badge-18 { display:inline-flex; align-items:center; gap:.3rem; background:rgba(212,175,55,.12); border:1px solid var(--border); color:var(--gold); font-size:.7rem; letter-spacing:.05em; padding:.25rem .7rem; border-radius:2px; }
+
+  @media(max-width:768px){ .vt-nav-links{gap:1rem;} .vt-navbar{padding:0 1rem;} .stats-bar{gap:1rem;} }
+</style>
+</head>
+<body>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  <div class="flash-container">
+    {% for category, message in messages %}
+    <div class="flash-msg flash-{{ category }}">
+      <i class="bi bi-{% if category == 'success' %}check-circle{% elif category == 'danger' %}exclamation-circle{% else %}info-circle{% endif %}"></i>
+      {{ message }}
+    </div>
+    {% endfor %}
+  </div>
+  <script>setTimeout(()=>document.querySelector('.flash-container')?.remove(),4000);</script>
+  {% endif %}
+{% endwith %}
+
+<!-- NAVBAR -->
+<nav class="vt-navbar" aria-label="Navegación principal">
+  <a href="{{ url_for('index') }}" class="vt-logo" aria-label="Velvet Touch - Inicio">Velvet <span>Touch</span></a>
+  <div class="vt-nav-links">
+    <a href="#ciudades">Ciudades</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+    {% if current_user %}
+      <a href="{{ url_for('panel') }}" class="btn-outline-gold">Mi Panel</a>
+      <a href="{{ url_for('logout') }}" class="btn-gold">Salir</a>
+    {% else %}
+      <a href="{{ url_for('login') }}" class="btn-outline-gold">Iniciar Sesión</a>
+      <a href="{{ url_for('registro') }}" class="btn-gold">Registrarse</a>
+    {% endif %}
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="vt-hero" aria-label="Cabecera principal">
+  <div style="position:relative;z-index:1;">
+    <div class="vt-hero-eyebrow"><i class="bi bi-gem me-2"></i>Directorio Exclusivo · España · +18</div>
+    <h1>Masajistas profesionales<br>en <em>toda España</em></h1>
+    <div class="hero-divider"></div>
+    <p>El directorio premium de masajistas independientes verificadas en Madrid, Barcelona, Valencia, Sevilla y más de 30 ciudades. Masajes eróticos, tántricos, sensuales y relajantes con total discreción.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="#masajistas" class="btn-gold" style="padding:.7rem 2rem;font-size:.82rem;">Explorar perfiles</a>
+      <a href="{{ url_for('registro') }}" class="btn-outline-gold" style="padding:.7rem 2rem;font-size:.82rem;">Publicar mi perfil</a>
+    </div>
+  </div>
+</section>
+
+<main>
+<div class="container">
+
+  <!-- BREADCRUMB -->
+  <nav class="vt-breadcrumb" aria-label="Ruta de navegación">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/" itemprop="item"><span itemprop="name">Inicio</span></a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Masajistas en España</span>
+        <meta itemprop="position" content="2">
+      </li>
+    </ol>
+  </nav>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar mt-4" aria-label="Estadísticas de la plataforma">
+    <div class="stat-item"><div class="stat-num">500+</div><div class="stat-lbl">Masajistas activas</div></div>
+    <div class="stat-item"><div class="stat-num">30+</div><div class="stat-lbl">Ciudades en España</div></div>
+    <div class="stat-item"><div class="stat-num">12K+</div><div class="stat-lbl">Clientes satisfechos</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-lbl">Perfiles verificados</div></div>
+    <div class="stat-item"><div class="stat-num">4.9★</div><div class="stat-lbl">Valoración media</div></div>
+  </div>
+
+  <!-- FILTROS POR CIUDAD -->
+  <section id="ciudades" aria-label="Buscar masajistas por ciudad">
+    <p class="section-label"><i class="bi bi-geo-alt me-1"></i>Buscar por ciudad</p>
+    <h2 class="section-title">Masajistas por ciudad</h2>
+    <p class="section-subtitle">Encuentra masajistas profesionales en tu ciudad o provincia.</p>
+    <div class="city-pills" role="list" aria-label="Ciudades disponibles">
+      {% set ciudades = ['Madrid','Barcelona','Valencia','Sevilla','Bilbao','Zaragoza','Málaga','Alicante','Granada','Córdoba','Valladolid','Murcia','San Sebastián','Santander','A Coruña','Vigo','Salamanca','Toledo','Burgos','León','Oviedo','Palma','Las Palmas','Tenerife','Ibiza','Marbella','Torremolinos','Benidorm','Sitges','Lloret de Mar'] %}
+      {% for ciudad in ciudades %}
+      <a href="/masajistas/{{ ciudad | lower | replace(' ','-') }}" class="city-pill" role="listitem">
+        <i class="bi bi-geo-alt-fill me-1" style="color:var(--gold);font-size:.7rem;"></i>{{ ciudad }}
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- GRID MASAJISTAS -->
+  <section class="vt-section" id="masajistas" aria-label="Perfiles de masajistas">
+    <div class="text-center mb-5">
+      <p class="section-label"><i class="bi bi-stars me-1"></i>Perfiles destacados</p>
+      <h2 class="section-title">Masajistas verificadas en España</h2>
+      <p class="section-subtitle">Profesionales independientes seleccionadas, con perfil verificado y valoraciones reales.</p>
+    </div>
+
+    {% if masajistas %}
+    <div class="row g-4" itemscope itemtype="https://schema.org/ItemList">
+      {% for m in masajistas %}
+      <div class="col-12 col-sm-6 col-lg-4" itemprop="itemListElement" itemscope itemtype="https://schema.org/Person">
+        <div class="masajista-card">
+          <div class="masajista-card-img-wrap">
+            {% if loop.index <= 2 %}<span class="card-badge">Destacada</span>{% endif %}
+            <img src="{{ m.foto_url() }}" alt="Masajista {{ m.nombre }} en {{ m.ubicacion or 'España' }}" class="masajista-card-img" itemprop="image" loading="lazy">
+          </div>
+          <div class="masajista-card-body">
+            <h3 class="masajista-name" itemprop="name">{{ m.nombre }}</h3>
+            <div class="masajista-meta">
+              <span><i class="bi bi-calendar3"></i> <span itemprop="age">{{ m.edad or '—' }}</span> años</span>
+              <span><i class="bi bi-globe2"></i> <span itemprop="nationality">{{ m.nacionalidad or '—' }}</span></span>
+              <span><i class="bi bi-geo-alt"></i> <span itemprop="address">{{ m.ubicacion or '—' }}</span></span>
+            </div>
+            <a href="{{ url_for('perfil', masajista_id=m.id) }}" class="btn-perfil" itemprop="url" aria-label="Ver perfil de {{ m.nombre }}">Ver Perfil</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <i class="bi bi-moon-stars"></i>
+      <p>Sé la primera masajista en unirte a Velvet Touch.</p>
+      <a href="{{ url_for('registro') }}" class="btn-gold mt-3" style="display:inline-block;">Crear mi perfil</a>
+    </div>
+    {% endif %}
+  </section>
+
+  <!-- CIUDADES GRID -->
+  <section class="seo-section" id="ciudades-grid" aria-label="Directorio por ciudades">
+    <h2>Directorio de masajistas por ciudad</h2>
+    <p>Velvet Touch es el directorio de masajistas profesionales con mayor cobertura en España. Contamos con masajistas verificadas en las principales ciudades y provincias del país, disponibles para visitas a domicilio, en hotel o en su propio local privado.</p>
+    <div class="row g-3 mt-3">
+      {% set ciudad_data = [
+        ('Madrid','bi-building','120+'),('Barcelona','bi-buildings','95+'),
+        ('Valencia','bi-sun','60+'),('Sevilla','bi-flower1','45+'),
+        ('Bilbao','bi-cloud','30+'),('Zaragoza','bi-wind','28+'),
+        ('Málaga','bi-umbrella','42+'),('Alicante','bi-water','35+'),
+        ('Granada','bi-stars','22+'),('Murcia','bi-tree','18+'),
+        ('Valladolid','bi-snow','15+'),('Las Palmas','bi-brightness-high','25+')
+      ] %}
+      {% for nombre, icon, count in ciudad_data %}
+      <div class="col-6 col-sm-4 col-lg-3">
+        <a href="/masajistas/{{ nombre | lower | replace(' ','-') }}" class="city-card">
+          <div class="city-card-icon"><i class="bi {{ icon }}"></i></div>
+          <div class="city-card-name">{{ nombre }}</div>
+          <div class="city-card-count">{{ count }} masajistas</div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- TIPOS DE MASAJE -->
+  <section class="seo-section" id="servicios" aria-label="Tipos de masaje disponibles">
+    <h2>Tipos de masaje — Guía completa</h2>
+    <p>En Velvet Touch encontrarás masajistas especializadas en una amplia variedad de técnicas y estilos. Cada profesional define sus propios servicios y tarifas, garantizando siempre una experiencia personalizada y de alta calidad.</p>
+    <div class="row g-3 mt-2">
+      {% set servicios = [
+        ('Masaje erótico','bi-heart','El masaje erótico combina técnicas de relajación con una dimensión sensorial más íntima. Ideal para liberar tensiones y conectar con el propio cuerpo de forma consciente y placentera.'),
+        ('Masaje tántrico','bi-infinity','El masaje tántrico es una práctica milenaria que trabaja la energía corporal para alcanzar estados de relajación profunda y bienestar integral. No es un masaje sexual, sino una experiencia transformadora.'),
+        ('Masaje sensitivo','bi-hand-index-thumb','El masaje sensitivo se centra en la estimulación de los sentidos a través de caricias suaves, aceites aromáticos y una presión delicada que despierta cada zona del cuerpo.'),
+        ('Masaje relajante','bi-cloud','El masaje relajante clásico utiliza movimientos lentos y continuos para aliviar la tensión muscular y reducir el estrés. Perfecto como punto de partida para quienes se inician en el mundo del masaje.'),
+        ('Body to body','bi-person','El masaje body to body es una técnica en la que la masajista utiliza todo su cuerpo para dar el masaje, creando un contacto total que maximiza la sensación de calor y relajación.'),
+        ('Masaje con aceites','bi-droplet','Los aceites aromáticos y esenciales son protagonistas en esta modalidad. Cada aceite tiene propiedades específicas: relajantes, estimulantes o afrodisíacas. El resultado es una piel hidratada y una mente en calma.'),
+        ('Masaje en pareja','bi-people','Una experiencia compartida. Dos masajistas atienden simultáneamente a la pareja, sincronizando movimientos para crear una sesión íntima y única que refuerza el vínculo emocional.'),
+        ('Masaje californiano','bi-sun','Originado en el Instituto Esalen de California, este masaje se caracteriza por sus movimientos largos, ondulantes y envolventes que trabajan todo el cuerpo como una unidad.'),
+        ('Masaje a domicilio','bi-house','La masajista se desplaza a tu domicilio particular u hotel. Sin desplazamientos, sin buscar aparcamiento. La experiencia premium llega directamente a ti, en tu espacio.'),
+      ] %}
+      {% for titulo, icon, desc in servicios %}
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="service-card" itemscope itemtype="https://schema.org/Service">
+          <div style="color:var(--gold);font-size:1.3rem;margin-bottom:.6rem;"><i class="bi {{ icon }}"></i></div>
+          <h3 class="service-card-title" itemprop="name">{{ titulo }}</h3>
+          <p class="service-card-desc" itemprop="description">{{ desc }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ARTÍCULO SEO: Guía general -->
+  <article class="seo-section" aria-label="Guía completa de masajes en España">
+    <h2>Cómo encontrar masajistas profesionales en España: guía completa 2025</h2>
+    <p>Encontrar una masajista profesional y de confianza en España puede ser un proceso abrumador si no sabes por dónde empezar. En Velvet Touch hemos creado el directorio más completo del país para que puedas conectar directamente con masajistas independientes verificadas, sin intermediarios y con total discreción.</p>
+
+    <h3>¿Qué es una masajista independiente?</h3>
+    <p>Una masajista independiente es una profesional que ofrece sus servicios de forma autónoma, sin estar vinculada a un centro de masajes o spa. Esto le permite ofrecer precios más competitivos, mayor flexibilidad horaria y una atención mucho más personalizada. En Velvet Touch todas nuestras masajistas son profesionales autónomas que gestionan directamente su agenda y sus tarifas.</p>
+
+    <h3>Ventajas de contratar una masajista a domicilio en España</h3>
+    <p>El masaje a domicilio ha ganado enormes cantidades de adeptos en los últimos años en ciudades como Madrid, Barcelona y Valencia. Las principales ventajas son:</p>
+    <ul>
+      <li>Comodidad total: recibes el masaje en tu propia cama o en una camilla portátil en tu hogar.</li>
+      <li>Privacidad y discreción máximas, sin coincidencias en salas de espera.</li>
+      <li>Flexibilidad horaria: muchas masajistas ofrecen servicio nocturno y en festivos.</li>
+      <li>Posibilidad de personalizar completamente la sesión: aceites, aromaterapia, música, temperatura.</li>
+      <li>Sin desplazamientos ni estrés post-masaje: puedes quedarte tranquilamente en casa.</li>
+    </ul>
+
+    <h3>¿Cómo saber si una masajista es profesional?</h3>
+    <p>En Velvet Touch todas las masajistas pasan por un proceso de verificación de identidad antes de aparecer en el directorio. Además, cada perfil incluye valoraciones reales de clientes anteriores, descripción detallada de sus servicios y tarifas transparentes. Te recomendamos fijarte siempre en: el número de reseñas, la calidad y cantidad de las fotos, la detalle de la descripción y la claridad en sus tarifas.</p>
+
+    <h3>Masajistas en Madrid</h3>
+    <p>Madrid es la ciudad con mayor oferta de masajistas profesionales de toda España. Con más de 120 masajistas registradas en Velvet Touch, la capital ofrece una variedad extraordinaria de perfiles: masajistas venezolanas, colombianas, rusas, ucranianas y españolas, especializadas en todo tipo de masajes desde el relajante clásico hasta el tántrico o el masaje sensitivo. La mayoría de nuestras masajistas en Madrid atienden tanto en local propio como a domicilio en barrios como Salamanca, Chamberí, Malasaña, Retiro y Centro.</p>
+
+    <h3>Masajistas en Barcelona</h3>
+    <p>Barcelona es la segunda ciudad en número de masajistas en nuestra plataforma. La ciudad condal tiene una larga tradición en el mundo del bienestar y el masaje, con una clientela internacional y cosmopolita. Nuestras masajistas en Barcelona se concentran principalmente en los barrios del Eixample, Gràcia, Poble Sec y el Barceloneta, aunque muchas ofrecen servicio de desplazamiento a toda el área metropolitana incluyendo Hospitalet, Badalona y Castelldefels.</p>
+
+    <h3>Masajistas en Valencia</h3>
+    <p>Valencia cuenta con una vibrante comunidad de masajistas profesionales, con una mezcla de profesionales locales e internacionales. El masaje a domicilio es especialmente popular en Valencia, donde muchas masajistas se desplazan a los principales hoteles de la ciudad, como los del entorno de la Ciudad de las Artes y las Ciencias o del barrio de Russafa.</p>
+
+    <h3>Masajistas en Sevilla, Málaga y Andalucía</h3>
+    <p>Andalucía es la tercera comunidad autónoma con más masajistas en Velvet Touch. Sevilla, Málaga, Granada y Córdoba concentran la mayor actividad. La demanda de masajes eróticos y sensitivos en Andalucía ha crecido un 40% en el último año, especialmente en zonas turísticas como Marbella, Torremolinos y Nerja, donde la clientela internacional tiene un papel fundamental.</p>
+  </article>
+
+  <!-- ARTÍCULO SEO: Masajes eróticos -->
+  <article class="seo-section" aria-label="Información sobre masajes eróticos en España">
+    <h2>Masajes eróticos en España: todo lo que necesitas saber</h2>
+    <p>El masaje erótico es uno de los servicios más demandados en plataformas como Velvet Touch. Aunque el término puede generar confusión, es importante entender qué es y qué no es un masaje erótico profesional.</p>
+
+    <h3>¿Qué incluye un masaje erótico?</h3>
+    <p>Un masaje erótico profesional es un masaje en el que la masajista trabaja todo el cuerpo del cliente, incluyendo zonas normalmente omitidas en los masajes terapéuticos convencionales. El objetivo es producir un estado de relajación profunda combinada con estimulación sensorial. Cada masajista define exactamente qué incluye su servicio en su perfil de Velvet Touch, con total transparencia.</p>
+
+    <h3>Masajes eróticos en Madrid</h3>
+    <p>Madrid concentra la mayor oferta de masajes eróticos de España. Barrios como Salamanca, Chamberí, Centro y Arganzuela son los más demandados. Las tarifas de masajes eróticos en Madrid oscilan entre los 80€ y los 200€ por hora, dependiendo del perfil de la masajista y la duración de la sesión.</p>
+
+    <h3>Masajes eróticos en Barcelona</h3>
+    <p>La demanda de masajes eróticos en Barcelona es especialmente alta durante los fines de semana y los períodos de convenciones y ferias internacionales como el Mobile World Congress. Muchas masajistas en Barcelona ofrecen descuentos para sesiones de dos horas o más.</p>
+
+    <h3>Masajes eróticos para parejas</h3>
+    <p>Cada vez son más las parejas que buscan experiencias de masaje erótico compartidas. En Velvet Touch puedes encontrar masajistas que ofrecen sesiones para dos personas, con opciones de una o dos masajistas simultáneamente. Es una experiencia que muchas parejas describen como transformadora para su vida íntima.</p>
+
+    <h3>Discreción y seguridad en masajes eróticos</h3>
+    <p>En Velvet Touch la privacidad es un valor fundamental. Todas las transacciones y comunicaciones entre clientes y masajistas son directas, sin intermediarios que puedan comprometer tu privacidad. Ningún cargo aparecerá en tu extracto bancario relacionado con servicios de masaje íntimo.</p>
+  </article>
+
+  <!-- ARTÍCULO SEO: Masaje tántrico -->
+  <article class="seo-section" aria-label="Masaje tántrico en España">
+    <h2>Masaje tántrico en España: beneficios, técnicas y dónde encontrarlo</h2>
+    <p>El masaje tántrico tiene sus raíces en las tradiciones espirituales de la India y ha ganado enorme popularidad en España en la última década. A diferencia de lo que muchos creen, el masaje tántrico no es necesariamente un masaje sexual, aunque tiene una dimensión sensorial muy pronunciada.</p>
+
+    <h3>Orígenes del masaje tántrico</h3>
+    <p>El tantra es una disciplina espiritual que busca la integración del cuerpo, la mente y el espíritu a través de la energía vital. El masaje tántrico aplica estos principios al trabajo corporal, utilizando técnicas de respiración, visualización y contacto físico consciente para mover la energía a través del cuerpo.</p>
+
+    <h3>Beneficios del masaje tántrico</h3>
+    <ul>
+      <li>Reducción profunda del estrés y la ansiedad.</li>
+      <li>Mayor conciencia corporal y conexión con las propias sensaciones.</li>
+      <li>Mejora de la vida íntima y de la capacidad de dar y recibir placer.</li>
+      <li>Liberación de bloqueos emocionales almacenados en el cuerpo.</li>
+      <li>Aumento de la energía vital y la vitalidad general.</li>
+      <li>Mejora de la autoestima y la imagen corporal.</li>
+    </ul>
+
+    <h3>Masajistas tántricas en Madrid y Barcelona</h3>
+    <p>Las masajistas tántricas en Madrid y Barcelona suelen tener una formación específica en este tipo de masaje. En Velvet Touch puedes filtrar por tipo de servicio para encontrar masajistas especializadas en masaje tántrico en tu ciudad. La sesión estándar dura entre 90 minutos y dos horas, con tarifas que oscilan entre los 120€ y los 300€.</p>
+
+    <h3>¿Cuánto cuesta un masaje tántrico en España?</h3>
+    <p>Los precios del masaje tántrico en España varían según la ciudad, la experiencia de la masajista y la duración de la sesión. Como referencia general: en Madrid y Barcelona las tarifas son algo más altas que en ciudades más pequeñas. La media nacional ronda los 150€ por hora para masajistas con experiencia demostrada.</p>
+  </article>
+
+  <!-- ARTÍCULO SEO: Consejos para clientes -->
+  <article class="seo-section" aria-label="Consejos para clientes de masajes">
+    <h2>Guía para clientes: cómo aprovechar al máximo tu sesión de masaje</h2>
+    <p>Si es tu primera vez contratando los servicios de una masajista profesional en España, esta guía te ayudará a tener la mejor experiencia posible.</p>
+
+    <h3>Antes de la sesión</h3>
+    <ul>
+      <li><strong>Lee el perfil completo:</strong> Cada masajista describe detalladamente qué incluye y qué no incluye su servicio. Lee con atención antes de contactar.</li>
+      <li><strong>Reserva con antelación:</strong> Las masajistas más demandadas tienen agendas muy ocupadas. Intenta reservar con al menos 24 horas de antelación.</li>
+      <li><strong>Comunica tus preferencias:</strong> No tengas reparo en explicar qué zonas quieres que se trabajen más, si tienes alguna lesión o si prefieres más o menos presión.</li>
+      <li><strong>Dúchate antes:</strong> Es un gesto de respeto básico hacia la profesional.</li>
+      <li><strong>Llega puntual:</strong> El tiempo de la sesión empieza en el horario acordado.</li>
+    </ul>
+
+    <h3>Durante la sesión</h3>
+    <ul>
+      <li>Confía en la profesional y desconecta el teléfono.</li>
+      <li>Comunica si algo te molesta o si quieres más o menos presión.</li>
+      <li>Respira profundo y permite que tu cuerpo se relaje completamente.</li>
+      <li>No intentes dirigir la sesión: la masajista sabe qué hace.</li>
+    </ul>
+
+    <h3>Después de la sesión</h3>
+    <ul>
+      <li>Bebe agua: los masajes activan la circulación y es importante hidratarse.</li>
+      <li>Evita actividades intensas durante las siguientes horas.</li>
+      <li>Deja una valoración honesta en el perfil de la masajista: ayudas a la comunidad.</li>
+    </ul>
+  </article>
+
+  <!-- ARTÍCULO SEO: Para masajistas -->
+  <article class="seo-section" aria-label="Información para masajistas que quieren publicar su perfil">
+    <h2>¿Eres masajista profesional? Publica tu perfil en Velvet Touch</h2>
+    <p>Velvet Touch es la plataforma líder en España para masajistas independientes que quieren aumentar su visibilidad, atraer nuevos clientes y gestionar su agenda de forma profesional. Registrarte es gratuito y el proceso tarda menos de 10 minutos.</p>
+
+    <h3>Ventajas de publicar tu perfil en Velvet Touch</h3>
+    <ul>
+      <li>Visibilidad en todo el territorio nacional y posicionamiento orgánico en Google.</li>
+      <li>Perfil completamente personalizable: fotos, descripción, servicios, tarifas.</li>
+      <li>Los clientes te contactan directamente por WhatsApp o teléfono: sin comisiones.</li>
+      <li>Sistema de valoraciones que aumenta tu credibilidad y genera confianza.</li>
+      <li>Proceso de verificación que te distingue de perfiles no verificados.</li>
+      <li>Acceso a estadísticas de visitas a tu perfil.</li>
+    </ul>
+
+    <h3>¿Quién puede publicar en Velvet Touch?</h3>
+    <p>Cualquier masajista profesional mayor de 18 años con residencia en España puede crear su perfil en Velvet Touch. No es necesario tener formación oficial, aunque valoramos positivamente que indiques tu formación y especialización en tu descripción.</p>
+
+    <h3>Cómo crear un perfil que convierta visitas en clientes</h3>
+    <ul>
+      <li><strong>Fotos de calidad:</strong> Son el elemento más determinante. Invierte en una buena sesión de fotos.</li>
+      <li><strong>Descripción detallada:</strong> Explica tu estilo, tu experiencia y qué hace única tu sesión. Al menos 200 palabras.</li>
+      <li><strong>Tarifas claras:</strong> Los clientes valoran la transparencia. Indica tus precios de forma visible.</li>
+      <li><strong>Responde rápido:</strong> Un tiempo de respuesta inferior a 2 horas incrementa significativamente las reservas.</li>
+      <li><strong>Actualiza tu disponibilidad:</strong> Informa regularmente de si estás disponible o no.</li>
+    </ul>
+
+    <div class="text-center mt-4">
+      <a href="{{ url_for('registro') }}" class="btn-gold" style="padding:.9rem 2.5rem;font-size:.85rem;display:inline-block;">Crear mi perfil gratis</a>
+    </div>
+  </article>
+
+  <!-- FAQ -->
+  <section class="seo-section" aria-label="Preguntas frecuentes">
+    <h2>Preguntas frecuentes sobre masajistas en España</h2>
+    <p style="margin-bottom:2rem;">Resolvemos las dudas más comunes de clientes y masajistas sobre nuestra plataforma y el mundo del masaje profesional en España.</p>
+
+    {% set faqs = [
+      ('¿Son legales los masajes eróticos en España?', 'En España no existe ninguna ley que prohíba los masajes eróticos entre adultos que consienten. Son una actividad completamente legal. Lo que sí está regulado es la publicidad de ciertos servicios sexuales explícitos, por lo que en Velvet Touch mantenemos un enfoque elegante y no explícito en todos los perfiles.'),
+      ('¿Cómo puedo estar seguro de que los perfiles son reales?', 'Todos los perfiles de Velvet Touch pasan por un proceso de verificación de identidad antes de ser publicados. Además, las valoraciones de clientes reales y la coherencia entre fotos y descripción son señales de fiabilidad. Desconfía de perfiles sin fotos propias o sin descripción.'),
+      ('¿Puedo pagar con tarjeta o solo en efectivo?', 'El método de pago lo decide cada masajista de forma independiente. La mayoría acepta efectivo, y muchas también aceptan Bizum u otras aplicaciones de pago instantáneo. Consulta directamente con la masajista antes de la sesión.'),
+      ('¿Qué hago si la sesión no cumple mis expectativas?', 'Te recomendamos comunicar durante la sesión si algo no te está gustando. Las masajistas profesionales valoran el feedback. Si la experiencia fue muy diferente a lo prometido en el perfil, puedes dejar una valoración honesta que ayude a otros usuarios.'),
+      ('¿Ofrecen las masajistas servicio en hoteles?', 'Sí. La gran mayoría de masajistas en Velvet Touch ofrecen servicio en hoteles, especialmente en ciudades con gran afluencia turística como Madrid, Barcelona, Valencia, Sevilla y Málaga. Indica el hotel y la habitación al contactar y confirma el desplazamiento con la masajista.'),
+      ('¿Cuánto cuesta de media una sesión de masaje en España?', 'Los precios varían según la ciudad, el tipo de masaje y la experiencia de la masajista. Como referencia: masaje relajante 60-90€/hora; masaje erótico 80-150€/hora; masaje tántrico 120-250€/hora. Los precios en Madrid y Barcelona suelen ser un 15-20% más altos que la media nacional.'),
+      ('¿Puedo reservar una masajista para un evento de empresa?', 'Algunas masajistas en Velvet Touch ofrecen servicios para eventos corporativos, principalmente masajes de silla o masajes express en contextos profesionales. Para este tipo de servicios te recomendamos contactar directamente y explicar el contexto.'),
+      ('¿Las masajistas hablan otros idiomas?', 'Muchas masajistas en Velvet Touch son internacionales y hablan inglés, además de español. Algunas también hablan francés, ruso, italiano o portugués. Si el idioma es importante para ti, revisa la descripción del perfil o pregunta directamente.'),
+    ] %}
+
+    <div role="list" aria-label="Preguntas frecuentes">
+      {% for pregunta, respuesta in faqs %}
+      <div class="faq-item" role="listitem" itemscope itemtype="https://schema.org/Question">
+        <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false" role="button" tabindex="0">
+          <span itemprop="name">{{ pregunta }}</span>
+          <i class="bi bi-plus-circle"></i>
+        </div>
+        <div class="faq-answer" itemscope itemtype="https://schema.org/Answer">
+          <div class="faq-answer-inner" itemprop="text">{{ respuesta }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- SCHEMA FAQ JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% set faqs2 = [
+        ('¿Son legales los masajes eróticos en España?', 'En España no existe ninguna ley que prohíba los masajes eróticos entre adultos que consienten. Son una actividad completamente legal.'),
+        ('¿Cómo puedo estar seguro de que los perfiles son reales?', 'Todos los perfiles de Velvet Touch pasan por un proceso de verificación de identidad antes de ser publicados.'),
+        ('¿Cuánto cuesta de media una sesión de masaje en España?', 'Los precios varían: masaje relajante 60-90€/hora; masaje erótico 80-150€/hora; masaje tántrico 120-250€/hora.')
+      ] %}
+      {% for q, a in faqs2 %}
+      {
+        "@type": "Question",
+        "name": {{ q | tojson }},
+        "acceptedAnswer": { "@type": "Answer", "text": {{ a | tojson }} }
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+
+  <!-- TAGS / PALABRAS CLAVE INTERNAS -->
+  <section class="seo-section" aria-label="Categorías y términos de búsqueda">
+    <h2>Categorías populares</h2>
+    <p>Explora masajistas por especialidad, origen, ciudad o tipo de masaje.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;">
+      {% set tags = [
+        'Masajistas Madrid','Masajistas Barcelona','Masajistas Valencia','Masajistas Sevilla',
+        'Masajistas Bilbao','Masajistas Zaragoza','Masajistas Málaga','Masajistas Alicante',
+        'Masajes eróticos Madrid','Masajes eróticos Barcelona','Masajes eróticos Valencia',
+        'Masaje tántrico Madrid','Masaje tántrico Barcelona','Masaje tántrico España',
+        'Masaje sensitivo','Masaje sensual','Masaje relajante','Masaje con aceites',
+        'Body to body Madrid','Body to body Barcelona','Masaje body to body',
+        'Masajista a domicilio Madrid','Masajista a domicilio Barcelona',
+        'Masajista colombiana','Masajista venezolana','Masajista rusa','Masajista ucraniana',
+        'Masajista brasileña','Masajista española','Masajista latina','Masajista extranjera',
+        'Masajista independiente','Masajista verificada','Masajista profesional',
+        'Masaje en hotel Madrid','Masaje en hotel Barcelona','Masaje en hotel Valencia',
+        'Masaje para parejas','Masaje erótico pareja','Masaje tántrico pareja',
+        'Masajista joven','Masajista madura','Masajista rubia','Masajista morena',
+        'Masajes Marbella','Masajes Ibiza','Masajes Tenerife','Masajes Canarias',
+        'Masajes Benidorm','Masajes Sitges','Masajes Torremolinos','Masajes Lloret de Mar',
+        'Masajista discreta','Masajista sin anuncios','Directorio masajistas España',
+        'Masajes eróticos sin anuncios','Masajistas verificadas España',
+      ] %}
+      {% for tag in tags %}
+      <a href="/buscar?q={{ tag | urlencode }}" style="background:var(--surface);border:1px solid var(--border);color:rgba(240,236,224,.55);font-size:.72rem;padding:.25rem .7rem;border-radius:2px;text-decoration:none;transition:color .2s,border-color .2s;" onmouseover="this.style.color='#d4af37';this.style.borderColor='rgba(212,175,55,.5)'" onmouseout="this.style.color='rgba(240,236,224,.55)';this.style.borderColor='rgba(212,175,55,.2)'">{{ tag }}</a>
+      {% endfor %}
+    </div>
+  </section>
+
+</div><!-- /container -->
+</main>
+
+<!-- FOOTER -->
+<footer class="vt-footer" id="contacto" aria-label="Pie de página">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="footer-logo">Velvet <span style="font-style:italic;color:#f0ece0;font-weight:400;">Touch</span></div>
+        <p class="footer-desc">La plataforma exclusiva para profesionales del masaje en España. Discreción, elegancia y calidad en cada perfil. Solo para adultos mayores de 18 años.</p>
+        <div class="badge-18"><i class="bi bi-shield-check"></i> Solo para mayores de 18 años</div>
+      </div>
+      <div class="col-6 col-md-2 offset-md-1">
+        <p class="footer-heading">Plataforma</p>
+        <ul class="footer-links">
+          <li><a href="#masajistas">Explorar perfiles</a></li>
+          <li><a href="{{ url_for('registro') }}">Registrarse</a></li>
+          <li><a href="{{ url_for('crear_perfil') }}">Crear perfil</a></li>
+          <li><a href="#servicios">Tipos de masaje</a></li>
+          <li><a href="#ciudades">Ciudades</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2">
+        <p class="footer-heading">Ciudades</p>
+        <ul class="footer-links">
+          <li><a href="/masajistas/madrid">Madrid</a></li>
+          <li><a href="/masajistas/barcelona">Barcelona</a></li>
+          <li><a href="/masajistas/valencia">Valencia</a></li>
+          <li><a href="/masajistas/sevilla">Sevilla</a></li>
+          <li><a href="/masajistas/malaga">Málaga</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2">
+        <p class="footer-heading">Legal</p>
+        <ul class="footer-links">
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Política de cookies</a></li>
+          <li><a href="#">Términos de uso</a></li>
+          <li><a href="#">DMCA</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-legal">
+      <span>&copy; 2025 Velvet Touch · Todos los derechos reservados · CIF: B-00000000</span>
+      <span style="color:rgba(212,175,55,.6);font-size:.68rem;">Contenido exclusivo para adultos mayores de 18 años. Al navegar aceptas los <a href="#" style="color:rgba(212,175,55,.5);">términos de uso</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+  document.querySelectorAll('.faq-question.open').forEach(q => {
+    q.classList.remove('open');
+    q.setAttribute('aria-expanded','false');
+    q.nextElementSibling.style.maxHeight = '0';
+  });
+  if (!isOpen) {
+    btn.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  }
+}
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn); } });
+});
+</script>
+</body>
+</html>
